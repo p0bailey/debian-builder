@@ -11,4 +11,3 @@ DEB_PACKAGING_DIR=$(pwd)
 
 # Build the package
 dpkg-buildpackage -uc -tc -rfakeroot
-
