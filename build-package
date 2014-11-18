@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Software source
+SOFTWARE_SOURCE=$(cd "$(pwd -P)/src"; pwd)
+
+# Home dir, root file system for this package
+HOME_DIR=$(cd "$(pwd -P)/.."; pwd)
+
+# Debian packaging dir
+DEB_PACKAGING_DIR=$(pwd)
+
+# Build the package
+dpkg-buildpackage -uc -tc -rfakeroot
+

@@ -1,0 +1,12 @@
+Source: helloworld
+Section: unknown
+Priority: extra
+Maintainer: Support <support@bla.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://www.bla.com/
+
+Package: helloworld
+Architecture: all
+Depends: 
+Description: Description goes here. 
