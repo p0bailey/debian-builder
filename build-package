@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#GPG_KEY=XXXXXXXX
+
 # Software source
 SOFTWARE_SOURCE=$(cd "$(pwd -P)/src"; pwd)
 
@@ -11,3 +13,6 @@ DEB_PACKAGING_DIR=$(pwd)
 
 # Build the package
 dpkg-buildpackage -uc -tc -rfakeroot
+
+#Gpg sign the package
+#dpkg-sig --sign builder -k ${GPG_KEY} ../*.deb
