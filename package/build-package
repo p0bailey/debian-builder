@@ -15,7 +15,7 @@ DEB_PACKAGING_DIR=$(pwd)
 #dpkg-buildpackage -uc -us -tc -rfakeroot
 
 # Build the package
-dpkg-buildpackage -uc -tc -rfakeroot
+#dpkg-buildpackage -uc -tc -rfakeroot
 
 #Gpg sign the package
 dpkg-sig --sign builder -k ${GPG_KEY} ../*.deb
