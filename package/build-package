@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#GPG_KEY=XXXXXXXX
+GPG_KEY=E3556535
 
 # Software source
 SOFTWARE_SOURCE=$(cd "$(pwd -P)/src"; pwd)
@@ -12,10 +12,10 @@ HOME_DIR=$(cd "$(pwd -P)/.."; pwd)
 DEB_PACKAGING_DIR=$(pwd)
 
 #Dont sign the package
-dpkg-buildpackage -uc -us -tc -rfakeroot
+#dpkg-buildpackage -uc -us -tc -rfakeroot
 
 # Build the package
-#dpkg-buildpackage -uc -tc -rfakeroot
+dpkg-buildpackage -uc -tc -rfakeroot
 
 #Gpg sign the package
-#dpkg-sig --sign builder -k ${GPG_KEY} ../*.deb
+dpkg-sig --sign builder -k ${GPG_KEY} ../*.deb
