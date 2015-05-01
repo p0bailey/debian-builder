@@ -12,7 +12,7 @@ HOME_DIR=$(cd "$(pwd -P)/.."; pwd)
 DEB_PACKAGING_DIR=$(pwd)
 
 #Dont sign the package
-#dpkg-buildpackage -uc -us -tc -rfakeroot
+dpkg-buildpackage -uc -us -tc -rfakeroot
 
 # Build the package
 #dpkg-buildpackage -uc -tc -rfakeroot
