@@ -11,8 +11,11 @@ HOME_DIR=$(cd "$(pwd -P)/.."; pwd)
 # Debian packaging dir
 DEB_PACKAGING_DIR=$(pwd)
 
+#Dont sign the package
+dpkg-buildpackage -uc -us -tc -rfakeroot
+
 # Build the package
-dpkg-buildpackage -uc -tc -rfakeroot
+#dpkg-buildpackage -uc -tc -rfakeroot
 
 #Gpg sign the package
 #dpkg-sig --sign builder -k ${GPG_KEY} ../*.deb
