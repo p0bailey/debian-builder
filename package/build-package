@@ -1,6 +1,7 @@
 #!/bin/bash
 
-GPG_KEY=E3556535
+GPG_KEY=8295356C
+
 
 # Software source
 SOFTWARE_SOURCE=$(cd "$(pwd -P)/src"; pwd)
