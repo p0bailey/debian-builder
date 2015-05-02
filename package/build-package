@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GPG_KEY=15402F78
+GPG_KEY=XXXXXXX
 
 
 # Software source
